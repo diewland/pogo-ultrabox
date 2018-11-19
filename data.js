@@ -5,7 +5,16 @@ let LUCKY_EGG   = { coin: 50 };
 let LURE        = { coin: 85 };
 let RAIDPASS_P  = { coin: 100 };
 let INCUBE_S    = { coin: 200 };
+let ITEMS = [
+  { 'title': 'Star Piece',      'info': STAR_PIECE, },
+  { 'title': 'Incense',         'info': INCENSE, },
+  { 'title': 'Lucky Egg',       'info': LUCKY_EGG, },
+  { 'title': 'Lure',            'info': LURE, },
+  { 'title': 'Raidpass',        'info': RAIDPASS_P, },
+  { 'title': 'Super Incubator', 'info': INCUBE_S, },
+];
 
+// ultraboxes
 let ULTRABOXES = [
   {
     date: new Date(2018, 9-1, 13),
