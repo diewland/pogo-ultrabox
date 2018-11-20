@@ -1,19 +1,22 @@
-var data = ITEMS.map(item => {
+let data = ITEMS.map(item => {
   return {
     name: item.title,
     type: "spline",
     showInLegend: true,
     dataPoints: ULTRABOXES.map(box_by_date => {
+      let o = box_by_date.items.filter(o => {
+        return item.title == o.item.title;
+      })[0];
+      let qty = o ? o.qty : 0;
       return {
         x: box_by_date.date,
-        y: 9, // TODO how to find item in box_by_date.items ?
+        y: qty,
       };
     }),
   }
 });
-console.log(data);
 
-var chart = new CanvasJS.Chart("chartContainer", {
+let chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
 		// text: "Ultrabox Items Comparision"
